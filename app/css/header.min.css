@@ -220,7 +220,7 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     background-image: url(../img/X.png);
     background-repeat: no-repeat;
     background-position: center top;
-    min-height: 218px;
+    max-height: 218px;
 }
 .search input[type=text]{
     box-shadow: 1px 2px 2.4px 1.6px rgba(0, 0, 0, 0.34);
@@ -265,21 +265,42 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     color:  #57a912;
     text-decoration: underline;
 }
+.middle_menu li.last{
+    background-color:  #e8e8e8;
+}
 .middle_menu li{
     display: inline-block;
-    width: 260px;
     height: 53px;
+    vertical-align: middle;
+    position: relative;
+}
+.middle_menu li.last:after{
+    display:none;
 }
 .middle_menu li a{
     display: block;
     height: 53px;
     text-align: center;
     font-family: Open Sans;
-    color:  #0b0b0b;
-    font-size: 13px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
-    line-height: 14px;
+
+    /* Приближение из-за подстановки шрифтов */
+    line-height: 18px;
     position: relative;
+    color: #0b0b0b;
+    font-size: 14px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    padding: 0px 64px 0 33px;
+    padding-top: 7px;
+    text-decoration: none;
+    transition: .2s all;
+}
+.middle_menu li:after{
+    height: 16px;
+    border-right: 1px dashed #000;
+    content: "";
+    position:absolute;
+    right: -4px;
+    top: 17px;
 }
 .middle_menu li a span{
     display: inline-block;
@@ -287,18 +308,54 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     text-align: center;
     margin: 0 2px;
 }
+.middle_menu li a span.img{
+    color: #00a100;
+    border-radius: 4px;
+    padding: 3px;
+    transition: .2s all;
+}
+.middle_menu li:hover a span.img{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 0px 1px #C4C5C4,0px 4px 3px 1px #274027;
+}
 .middle_menu li a strong{
     position: absolute;
     color: #f4f4f4;
     font-size: 12px;/* Приближение из-за подстановки шрифтов */
     font-weight: 700;
-    line-height: 14px;
     background: #00a100;
-    box-shadow: 0px 2px 0px 1px #037303;
-    width: 27px;
+    box-shadow: 0px 2px 0px 1px #037303,0px 4px 3px 1px #037303;
+    width: 23px;
     height: 27px;
-    right: 0px;
-    border-radius: 7px;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
     text-align: center;
     line-height: 27px;
+    transition: .2s all;
+}
+.middle_menu li.last a{
+    padding: 0 13px;
+    font-size: 13px;
+    padding-top: 8px;
+}
+.middle_menu li:hover a{
+    background-color:  #00a100;
+    color: #fff;
+}
+.middle_menu li:hover strong{
+    background: #FFFFFF;
+    color: #00a100;
+    box-shadow: 0px 2px 0px 1px #C4C5C4,0px 4px 3px 1px #274027;
+}
+section.middle_menu{
+    background-image:url(../img/middle_menu.jpg);
+    background-position: center;
+}
+.main_slider{
+    min-height:500px;
+}
+canvas{
+    display:block;
+    vertical-align:bottom;
 }
