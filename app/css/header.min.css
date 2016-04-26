@@ -57,7 +57,7 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
 }
 .mail{
     color:  #41a008;
-    font-size: 13px;/* Приближение из-за подстановки шрифтов */
+    font-size: 15px;/* Приближение из-за подстановки шрифтов */
     font-weight: 900;
     text-align: left;
     padding-left: 32px;
@@ -77,8 +77,7 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
 }
 .catalog{
     display: block;
-    background-color:  #00a100;
-    width: 162px;
+    width: 100%;
     height: 53px;
     box-shadow: 0px 2px 0px 1px #037303;
     font-family: Tahoma;
@@ -90,6 +89,8 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     letter-spacing: -1px;
     position: relative;
     padding-left: 22px;
+    background: #00a100 url(../img/arr_bottom.png) no-repeat 154px center;
+    margin-bottom: 17px;
 }
 .catalog:hover,.catalog:focus{
     text-decoration:none;
@@ -115,6 +116,7 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
 .logo{display: block;text-align: center;padding-top: 63px;padding-bottom: 42px;}
 .order{
     background-image: none;
+    padding-left: 23px;
 }
 .work-days span{
     width: 27px;
@@ -159,6 +161,7 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     letter-spacing: 0px;
     margin-top: 44px;
     background: url(../img/clock.png) no-repeat 17px 18px;
+    margin-bottom: 18px;
 }
 .header_info .pl{
     padding-left: 47px;
@@ -218,4 +221,61 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     background-repeat: no-repeat;
     background-position: center top;
     min-height: 218px;
+}
+.search input[type=text]{
+    box-shadow: 1px 2px 2.4px 1.6px rgba(0, 0, 0, 0.34);
+    height: 52px;
+    display: block;
+    width: 100%;
+    border: 4px solid rgba(128, 128, 128, 0.15);
+    border-radius: 4px;
+    outline: 0;
+    text-indent: 10px;
+    transition:.2s all;
+}
+.search{
+    position: relative;
+}
+.search input[type=text]:focus{
+    box-shadow: 1px 2px 3.4px 2.6px rgba(0, 0, 0, 0.34);
+}
+.search input[type=submit]{
+    position: absolute;
+    width: 54px;
+    height: 53px;
+    background: #00a100 url(../img/search.png) no-repeat center center;
+    right: 0px;
+    top: 0px;
+    border: 0;
+    font-size: 0;
+    border-radius: 2px;
+    box-shadow: 0px 2px 0px 1px #037303;
+}
+.eg{
+    font-family: 'Open Sans';
+    color:  #5e5e5e;
+    font-size: 13px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: -1px;
+    margin-top: 6px;
+    margin-left: 29px;
+}
+.eg a{
+    color:  #57a912;
+    text-decoration: underline;
+}
+.middle_menu li{
+    display: inline-block;
+    width: 260px;
+    height: 53px;
+}
+.middle_menu li a{
+    display: block;
+    height: 53px;
+}
+.middle_menu li a span{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
 }
