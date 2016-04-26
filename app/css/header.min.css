@@ -83,16 +83,30 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     box-shadow: 0px 2px 0px 1px #037303;
     font-family: Tahoma;
     color:  #ffffff;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 51px;
     font-weight: 400;
     text-align: center;
+    letter-spacing: -1px;
+    position: relative;
+    padding-left: 22px;
+}
+.catalog:hover,.catalog:focus{
+    text-decoration:none;
+    color:#fff;
+}
+.catalog > span{
+    position: absolute;
+    top: 15px;
+    display: block;
+    left: 13px;
 }
 .catalog span span{
     background-image:url(../img/menu.png);
     width: 17px;
     display: block;
     height: 3px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 .catalog:hover{
     color:  #ffffff;
