@@ -38,8 +38,10 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     background-image: url(../img/phone.jpg);
     background-repeat: no-repeat;
     height: 51px;
+    margin-bottom: 9px;
     margin-top: 36px;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
+    font-family: Roboto;
 }
 .phone span{
     margin-right: 14px;
@@ -51,15 +53,154 @@ body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-famil
     line-height: 14px;/* Приближение из-за подстановки шрифтов */
     text-align: left;
     color:  #545353;
+    letter-spacing: -0.9px;
 }
 .mail{
     color:  #41a008;
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
+    font-size: 13px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 900;
     text-align: left;
     padding-left: 32px;
     background-image: url(../img/mail.png);
     background-repeat: no-repeat;
     background-position: 3px center;
     letter-spacing: -1px;
+    text-decoration: none;
+    font-family: Roboto;
+}
+.mail:hover{
+    text-decoration: none;
+    color: inherit;
+}
+.mail span{
+    border-bottom: 1px dashed;
+}
+.catalog{
+    display: block;
+    background-color:  #00a100;
+    width: 162px;
+    height: 53px;
+    box-shadow: 0px 2px 0px 1px #037303;
+    font-family: Tahoma;
+    color:  #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+.catalog span{
+    background-image:url(../img/menu.png);
+    width: 15px;
+    display: block;
+    height: 1px;
+}
+.catalog:hover{
+    color:  #ffffff;
+    text-decoration: none;
+}
+.logo{display: block;text-align: center;padding-top: 63px;padding-bottom: 42px;}
+.order{
+    background-image: none;
+}
+.work-days span{
+    width: 27px;
+    height: 5px;
+    display: inline-block;
+}
+.work-days span.green{
+    background-color:  #009f00;
+}
+.work-days span.red{
+    background-color:  #ff0000;
+}
+.header-cart{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 0px 1px #037303;
+    margin-top: 51px;
+    margin-left: 56px;
+    background: #009f00 url(../img/cart.png) no-repeat center 11px;
+}
+.header-cart span{
+    border-radius: 50%;
+    background-color:  #ffffff;
+    box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 18px;
+    height: 18px;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-left: 9px;
+}
+.header_info{
+    font-family: Roboto;
+    color:  #444444;
+    font-size: 14px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 900;
+    line-height: 14px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    letter-spacing: 0px;
+    margin-top: 44px;
+    background: url(../img/clock.png) no-repeat 17px 18px;
+}
+.header_info .pl{
+    padding-left: 47px;
+}
+.header_info .ml{
+    margin-left: 47px;
+}
+.header_info .loc{
+    background-image: url(../img/map.png);
+    background-repeat: no-repeat;
+    padding: 5px 0 3px 17px;
+    margin-top: -5px;
+    color: #41a008;
+}
+.header_info strong{
+
+    font-size: 11px;
+
+    padding-left: 22px;
+
+    letter-spacing: -0.5px;
+
+    margin-top: 6px;
+
+    display: block;
+}
+.work-days{
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+.work-time{
+    padding-left: 11px;
+    position: relative;
+}
+.work-time:after{
+    background-color:  #009f00;
+    width: 7px;
+    height: 7px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+.work-time.green{
+    color: #009f00;
+}
+.work-time.red:after{
+    background-color:  #ff0000;
+}
+
+.work-time.red{
+    color: #ff0000;
+}
+.after_top{
+    background-image: url(../img/X.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 218px;
 }

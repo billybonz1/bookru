@@ -28,16 +28,16 @@
 	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
 
 	<!-- Load CSS Start -->
-	<script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
+
 	<script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
 	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
 	<!-- Load CSS End -->
 
 	<!-- Load CSS Compiled without JS -->
 	<noscript>
-		<link rel="stylesheet" href="css/fonts.min.css">
 		<link rel="stylesheet" href="css/main.min.css">
 	</noscript>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic">
 </head>
 
@@ -46,29 +46,94 @@
 	<!-- Здесь пишем код -->
 	<section class="top">
 		<div class="inner">
-			<ul class="top_menu menu">
-				<li><a href="">Каталог</a></li>
-				<li><a href="">Доставка</a></li>
-				<li><a href="">Оплата</a></li>
-				<li><a href="">Новости</a></li>
-				<li><a href="">Обзоры</a></li>
-				<li><a href="">Контакты</a></li>
-				<li><a href="">Форум</a></li>
-			</ul>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<ul class="top_menu menu">
+							<li><a href="">Каталог</a></li>
+							<li><a href="">Доставка</a></li>
+							<li><a href="">Оплата</a></li>
+							<li><a href="">Новости</a></li>
+							<li><a href="">Обзоры</a></li>
+							<li><a href="">Контакты</a></li>
+							<li><a href="">Форум</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</section>
 	<section class="after_top">
 		<div class="inner">
-			<div class="phone">
-				<span>+7 (495) 181-27-37 </span> <span>+7 (800) 200-00-27</span>
-				<strong>Будни с 9:00 - 21:00, Выходные с 10:00 - 21:00</strong>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="phone">
+							<span>+7 (495) 181-27-37 </span> <span>+7 (800) 200-00-27</span>
+							<strong>Будни с 9:00 - 21:00, Выходные с 10:00 - 21:00</strong>
+						</div>
+						<a href="" class="mail">
+							<span>support@xbook.ru</span>
+						</a>
+						<a href="" class="mail order">
+							<span>Заказать звонок</span>
+						</a>
+					</div>
+					<div class="col-lg-4">
+						<a href="" class="logo">
+							<img src="img/XBOOK.png" alt="">
+						</a>
+					</div>
+					<div class="col-lg-4">
+						<div class="header-cart pull-left">
+							<span>0</span>
+						</div>
+						<div class="header_info pull-right">
+							<div class="header_info-text pl">
+								Наш магазин в <span class="loc pull-right">Москва</span>
+							</div>
+							<div class="work-days pl">
+								<span class="green"></span>
+								<span class="green"></span>
+								<span class="green"></span>
+								<span class="red"></span>
+								<span class="green"></span>
+								<span class="red"></span>
+								<span class="red"></span>
+							</div>
+							<div class="work-time green pull-left ml">
+								08:30 - 18:00
+							</div>
+							<div class="work-time red pull-right">
+								08:30 - 15:00
+							</div>
+							<div class="clearfix"></div>
+							<strong>
+								Интернет магазин цыфровой и бытовой техники
+							</strong>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="mail">
-				support@xbook.ru
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-1">
+						<a href="#" class="catalog">
+							<span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+							Каталог товаров
+						</a>
+					</div>
+					<div class="col-lg-11">
+
+					</div>
+				</div>
 			</div>
-			<a href="#" class="catalog">
-				Каталог товаров
-			</a>
+
 		</div>
 	</section>
 	<div class="hidden"></div>
