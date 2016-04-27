@@ -35,6 +35,10 @@ gulp.task('scripts', function() {
 		'./app/libs/waypoints/waypoints.min.js',
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/plugins-scroll/plugins-scroll.js',
+		'./app/libs/owlcarousel/owl.carousel.js',
+		'./app/libs/scrollbar/scrollbar.js',
+		'./app/js/common.js',
+		'./app/js/particles.js'
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js
@@ -44,6 +48,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', function () {
 	gulp.watch('sass/*.sass', ['styles']);
 	gulp.watch('app/libs/**/*.js', ['scripts']);
+	gulp.watch('app/js/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 });
