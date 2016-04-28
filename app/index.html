@@ -53,7 +53,14 @@
 							<li><a href="">Каталог</a></li>
 							<li><a href="">Доставка</a></li>
 							<li><a href="">Оплата</a></li>
-							<li><a href="">Новости</a></li>
+							<li>
+								<a href="">Новости</a>
+								<ul>
+									<li><a href="">Каталог</a></li>
+									<li><a href="">Доставка</a></li>
+									<li><a href="">Оплата</a></li>
+								</ul>
+							</li>
 							<li><a href="">Обзоры</a></li>
 							<li><a href="">Контакты</a></li>
 							<li><a href="">Форум</a></li>
@@ -79,6 +86,15 @@
 						<a href="" class="mail order">
 							<span>Заказать звонок</span>
 						</a>
+						<div class="order-call">
+							<form action="">
+								<div class="subscribe">
+									<input type="text" placeholder="Имя:"> <br>
+									<input type="text" placeholder="Телефон:"> <br>
+									<input type="submit" value="Заказать">
+								</div>
+							</form>
+						</div>
 					</div>
 					<div class="col-lg-4 col-md-4">
 						<a href="" class="logo">
@@ -119,14 +135,23 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-2 col-md-2 col-sm-2">
-						<a href="#" class="catalog">
-							<span>
-								<span></span>
-								<span></span>
-								<span></span>
-							</span>
-							Каталог товаров
-						</a>
+						<ul class="catalog-menu menu">
+							<li>
+								<a href="#" class="catalog">
+									<span>
+										<span></span>
+										<span></span>
+										<span></span>
+									</span>
+									Каталог товаров
+								</a>
+								<ul>
+									<li><a href="">Новости</a></li>
+									<li><a href="">Обзоры</a></li>
+								</ul>
+							</li>
+						</ul>
+
 					</div>
 					<div class="col-lg-10 col-md-10 col-sm-10">
 						<form action="" class="search">
@@ -218,7 +243,7 @@
 	<section class="main_slider" >
 		<div class="back" id="main_slider"></div>
 		<div class="inner">
-			<div class="owl-carousel">
+			<div class="owl-main owl-carousel">
 				<div class="item">
 					<div class="pull-left">
 						<div class="item__title">NoteBook Alienware</div>
@@ -229,7 +254,6 @@
 						<a href="" class="item__more">Посмотреть</a>
 					</div>
 					<div class="item__img">
-						<img src="img/alien.png" alt="">
 					</div>
 				</div>
 				<div class="item">
@@ -242,7 +266,6 @@
 						<a href="" class="item__more">Посмотреть</a>
 					</div>
 					<div class="item__img">
-						<img src="img/alien.png" alt="">
 					</div>
 				</div>
 			</div>
@@ -277,7 +300,534 @@
 
 		</div>
 	</section>
+	<section class="promotion">
+		<div class="inner">
+			<div class="cotainer-fluid">
+				<div class="row">
+						<div class="col-lg-5 col-lg-offset-1">
+							<div class="pull-left">
+								<div class="promotion__title">
+									MSI GT80S 6QE Titan SLI
+								</div>
+								<div class="promotion__price">
+									Всего за <span>261 600</span> ₽
+								</div>
+								<a href="" class="promotion__buy">Купить в 1 клик</a>
+							</div>
+						</div>
+						<div class="col-lg-offset-1 col-lg-4">
+							<div class="promotion__img">
+								<img src="img/msi.png" alt="">
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="catalog__items">
+		<div class="catalog__items__title active">Ноутбуки</div>
+		<div class="inner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<ul class="catalog__brands menu">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="catalog__item col-lg-3 col-md-3">
+						<div>
+							<div class="catalog__item__buttons">
+								<div class="catalog__item__recommend">Рекомендуем!</div>
+								<div class="catalog__item__new">Новинка!</div>
+								<div class="catalog__item__discount">Скидка %</div>
+							</div>
+							<div class="catalog__item__img">
+								<img src="img/msi.png" alt="">
+							</div>
+							<div class="catalog__item__imgs">
+								<a href=""><img src="img/msi.png" alt=""></a>
+								<a href=""><img src="img/msi.png" alt=""></a>
+							</div>
+							<div class="catalog__item__title">Название товара</div>
+							<div class="catalog__item__rating">
+								<span class="active"></span><span class="active"></span><span class="active"></span><span
+									class="active"></span><span></span>
+							</div>
+							<div class="catalog__item__price">
+								Цена - 830 ₽
+							</div>
+							<div class="catalog__item__text">
+								коаксиальная АС, типоразмер: 13 см (5 дюйм.), количество полос: 3, импеданс: 4 Ом
+							</div>
+							<div class="catalog__item__quantity">
+								<div class="catalog__item__minus">-</div>
+								<input type="text" value="1">
+								<div class="catalog__item__plus">+</div>
+							</div>
+							<a href="" class="catalog__item__buy">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog__item col-lg-3 col-md-3">
+						<div>
+							<div class="catalog__item__img">
+								<img src="img/msi.png" alt="">
+							</div>
+							<div class="catalog__item__imgs">
+								<a href=""><img src="img/msi.png" alt=""></a>
+								<a href=""><img src="img/msi.png" alt=""></a>
+							</div>
+							<div class="catalog__item__title">Название товара</div>
+							<div class="catalog__item__rating">
+								<span class="active"></span><span class="active"></span><span class="active"></span><span
+									class="active"></span><span></span>
+							</div>
+							<div class="catalog__item__price">
+								Цена - 830 ₽
+							</div>
+							<div class="catalog__item__text">
+								коаксиальная АС, типоразмер: 13 см (5 дюйм.), количество полос: 3, импеданс: 4 Ом
+							</div>
+							<div class="catalog__item__quantity">
+								<div class="catalog__item__minus">-</div>
+								<input type="text" value="1">
+								<div class="catalog__item__plus">+</div>
+							</div>
+							<a href="" class="catalog__item__buy">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog__item col-lg-3 col-md-3">
+						<div>
+							<div class="catalog__item__img">
+								<img src="img/msi.png" alt="">
+							</div>
+							<div class="catalog__item__imgs">
+								<a href=""><img src="img/msi.png" alt=""></a>
+								<a href=""><img src="img/msi.png" alt=""></a>
+							</div>
+							<div class="catalog__item__title">Название товара</div>
+							<div class="catalog__item__rating">
+								<span class="active"></span><span class="active"></span><span class="active"></span><span
+									class="active"></span><span></span>
+							</div>
+							<div class="catalog__item__price">
+								Цена - 830 ₽
+							</div>
+							<div class="catalog__item__text">
+								коаксиальная АС, типоразмер: 13 см (5 дюйм.), количество полос: 3, импеданс: 4 Ом
+							</div>
+							<div class="catalog__item__quantity">
+								<div class="catalog__item__minus">-</div>
+								<input type="text" value="1">
+								<div class="catalog__item__plus">+</div>
+							</div>
+							<a href="" class="catalog__item__buy">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog__item col-lg-3 col-md-3">
+						<div>
+							<div class="catalog__item__img">
+								<img src="img/msi.png" alt="">
+							</div>
+							<div class="catalog__item__imgs">
+								<a href=""><img src="img/msi.png" alt=""></a>
+								<a href=""><img src="img/msi.png" alt=""></a>
+							</div>
+							<div class="catalog__item__title">Название товара</div>
+							<div class="catalog__item__rating">
+								<span class="active"></span><span class="active"></span><span class="active"></span><span
+									class="active"></span><span></span>
+							</div>
+							<div class="catalog__item__price">
+								Цена - 830 ₽
+							</div>
+							<div class="catalog__item__text">
+								коаксиальная АС, типоразмер: 13 см (5 дюйм.), количество полос: 3, импеданс: 4 Ом
+							</div>
+							<div class="catalog__item__quantity">
+								<div class="catalog__item__minus">-</div>
+								<input type="text" value="1">
+								<div class="catalog__item__plus">+</div>
+							</div>
+							<a href="" class="catalog__item__buy">В корзину</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="center">
+							<ul class="catalog__pagination">
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="catalog__items">
+		<div class="catalog__items__title active">Акустика</div>
+		<div class="inner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="catalog__item col-lg-3 col-md-3">
+						<div>
+							<div class="catalog__item__img">
+								<img src="img/msi.png" alt="">
+							</div>
+							<div class="catalog__item__imgs">
+								<a href=""><img src="img/msi.png" alt=""></a>
+								<a href=""><img src="img/msi.png" alt=""></a>
+							</div>
+							<div class="catalog__item__title">Название товара</div>
+							<div class="catalog__item__rating">
+								<span class="active"></span><span class="active"></span><span class="active"></span><span
+									class="active"></span><span></span>
+							</div>
+							<div class="catalog__item__price">
+								Цена - 830 ₽
+							</div>
+							<div class="catalog__item__text">
+								коаксиальная АС, типоразмер: 13 см (5 дюйм.), количество полос: 3, импеданс: 4 Ом
+							</div>
+							<div class="catalog__item__quantity">
+								<div class="catalog__item__minus">-</div>
+								<input type="text" value="1">
+								<div class="catalog__item__plus">+</div>
+							</div>
+							<a href="" class="catalog__item__buy">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog__item col-lg-3 col-md-3">
+						<div>
+							<div class="catalog__item__img">
+								<img src="img/msi.png" alt="">
+							</div>
+							<div class="catalog__item__imgs">
+								<a href=""><img src="img/msi.png" alt=""></a>
+								<a href=""><img src="img/msi.png" alt=""></a>
+							</div>
+							<div class="catalog__item__title">Название товара</div>
+							<div class="catalog__item__rating">
+								<span class="active"></span><span class="active"></span><span class="active"></span><span
+									class="active"></span><span></span>
+							</div>
+							<div class="catalog__item__price">
+								Цена - 830 ₽
+							</div>
+							<div class="catalog__item__text">
+								коаксиальная АС, типоразмер: 13 см (5 дюйм.), количество полос: 3, импеданс: 4 Ом
+							</div>
+							<div class="catalog__item__quantity">
+								<div class="catalog__item__minus">-</div>
+								<input type="text" value="1">
+								<div class="catalog__item__plus">+</div>
+							</div>
+							<a href="" class="catalog__item__buy">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog__item col-lg-3 col-md-3">
+						<div>
+							<div class="catalog__item__img">
+								<img src="img/msi.png" alt="">
+							</div>
+							<div class="catalog__item__imgs">
+								<a href=""><img src="img/msi.png" alt=""></a>
+								<a href=""><img src="img/msi.png" alt=""></a>
+							</div>
+							<div class="catalog__item__title">Название товара</div>
+							<div class="catalog__item__rating">
+								<span class="active"></span><span class="active"></span><span class="active"></span><span
+									class="active"></span><span></span>
+							</div>
+							<div class="catalog__item__price">
+								Цена - 830 ₽
+							</div>
+							<div class="catalog__item__text">
+								коаксиальная АС, типоразмер: 13 см (5 дюйм.), количество полос: 3, импеданс: 4 Ом
+							</div>
+							<div class="catalog__item__quantity">
+								<div class="catalog__item__minus">-</div>
+								<input type="text" value="1">
+								<div class="catalog__item__plus">+</div>
+							</div>
+							<a href="" class="catalog__item__buy">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog__item col-lg-3 col-md-3">
+						<div>
+							<div class="catalog__item__img">
+								<img src="img/msi.png" alt="">
+							</div>
+							<div class="catalog__item__imgs">
+								<a href=""><img src="img/msi.png" alt=""></a>
+								<a href=""><img src="img/msi.png" alt=""></a>
+							</div>
+							<div class="catalog__item__title">Название товара</div>
+							<div class="catalog__item__rating">
+								<span class="active"></span><span class="active"></span><span class="active"></span><span
+									class="active"></span><span></span>
+							</div>
+							<div class="catalog__item__price">
+								Цена - 830 ₽
+							</div>
+							<div class="catalog__item__text">
+								коаксиальная АС, типоразмер: 13 см (5 дюйм.), количество полос: 3, импеданс: 4 Ом
+							</div>
+							<div class="catalog__item__quantity">
+								<div class="catalog__item__minus">-</div>
+								<input type="text" value="1">
+								<div class="catalog__item__plus">+</div>
+							</div>
+							<a href="" class="catalog__item__buy">В корзину</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="center">
+							<ul class="catalog__pagination">
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="reviews">
+		<div class="inner">
+			<div class="catalog-fluid">
+				<div class="row">
+					<div class="catalog-lg-12">
+						<diw class="owl-reviews owl-carousel">
+							<div class="item">
+								<div class="reviews__title">Отзывы покупателей</div>
+								<div class="reviews__text">
+									Покупаю технику в этом магазине не первый раз. Нравится все. Выбор, обслуживание. Рекомендую всем знакомым и родственникам. Многие по моей 									рекомендации сделали заказ - очень довольны.
+								</div>
+								<div class="catalog__item__rating">
+									<span class="active"></span><span class="active"></span><span class="active"></span><span
+										class="active"></span><span></span>
+								</div>
+								<div class="reviews__name">Константин Циолковский</div>
+								<div class="reviews__date">10.03.2014</div>
+								<a href="" class="reviews__more">Все отзывы о магазине на сайте Яндекс.Маркет</a>
+								<div class="clearfix"></div>
+							</div>
+							<div class="item">
+								<div class="reviews__title">Отзывы покупателей</div>
+								<div class="reviews__text">
+									Покупаю технику в этом магазине не первый раз. Нравится все. Выбор, обслуживание. Рекомендую всем знакомым и родственникам. Многие по моей 									рекомендации сделали заказ - очень довольны.
+								</div>
+								<div class="catalog__item__rating">
+									<span class="active"></span><span class="active"></span><span class="active"></span><span
+										class="active"></span><span></span>
+								</div>
+								<div class="reviews__name">Константин Циолковский</div>
+								<div class="reviews__date">10.03.2014</div>
+								<a href="" class="reviews__more">Все отзывы о магазине на сайте Яндекс.Маркет</a>
+								<div class="clearfix"></div>
+							</div>
+						</diw>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="main__info">
+		<div class="inner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-7">
+						<h3>О магазине</h3>
+						<p>
+							Интернет магазин xbook это молодая энергичная команда ориентирующая на продажу ноутбуков в кредит и за наличные с доставкой по Москве и РФ. Вот уже более 5 лет на рынке начиная с 2009 года занимается реализацией мобильных коробочных версий техники как в розничных сетях так и в интернет канале. Нашими клиентами стали многие крупные корпоративные компании которые по сей день знают что мы можем предложить выгодные условия поставок, низкое ценообразование на любую группу товара, так и предложить оформить выгодный беспроцентный кредит от ведущих банков:
+						</p>
+						<p class="margin">
+							ООО «Хоум Кредит энд Финанс банк» (Генеральная лицензия ЦБ РФ № 316 от 15 марта 2012 г.)
+							ОАО «Банк Русский Стандарт» (Генеральная лицензия БР № 2289 от 19 июля 2001 г.)
+							ООО КБ «Ренессанс Кредит» (Генеральная лицензии Банка России на осуществление банковских операций № 3354)
+							ЗАО «Кредит Европа Банк» (Генеральная лицензия ЦБ РФ на осуществление банковских операций
+							№ 3311 от 22.02.2012.)
+							ОАО «ОТП Банк» (Генеральная лицензия ЦБ РФ на осуществление банковских операций №2766 от 04.03.2008)
+						</p>
+						<p>
+							На очень выгодных условиях наши клиенты могут взять ноутбук в кредит без переплаты и первоначального взноса оформив онлайн заявку на сайте не выходя из дома или находясь на рабочих местах в своем офисе не важно где Вы находитесь в Москве или в другом городе, мы работаем по всей территории РФ. Мы не самая идеальная компания как описывают многие интернет магазины, но мы можем сказать гордо и честно, что каждый клиент который обращается за помощью в покупке товара мы выполняем свою работу оперативно и честно, это подтверждает то количество банков которые с нами работают не один год и могут поручиться за нас.
+
+						</p>
+					</div>
+					<div class="col-lg-5">
+						<h3>Новости</h3>
+						<div class="main__news">
+							<div class="main__news__date">
+								20.04.2016
+							</div>
+							<a href="" class="main__news__title">
+								Новый функционал, который вы так ждали!
+								Основные улучшения
+							</a>
+							<div class="main__news__text">
+								1. Добавлен новый статус "По запросу" для товаров с отсутствующей или нулевой ценой, у которого появляется кнопка "Связаться".
+								2. На детальной странице товара добавлен блок "Вы смотрели".
+								3. Улучшение производительности.
+								4. Появилась возможность смотреть отмененные заказы в личном кабинете (фильтр в истории заказов работает на AJAX)
+								5. В малой корзине теперь выводится артикул товара.
+								6. В списке подразделов на страницах каталога добавлено отображение картинок разделов (при их наличии).
+								7. В списках сравнения и в списках избранного — теперь выводятся цены и статус наличия.
+							</div>
+						</div>
+						<div class="main__news__pag">
+							<ul class="menu">
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<a href="" class="main__news__more">Все новости</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer__before">
+		<div class="inner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-3">
+						<h4>Покупателям :</h4>
+						<ul class="footer-menu">
+							<li><a href="">О нас</a></li>
+							<li><a href="">Карта сайта</a></li>
+							<li><a href="">Вопрос-Ответ</a></li>
+							<li><a href="">Советы</a></li>
+							<li><a href="">Правила продажи</a></li>
+							<li><a href="">Прайс</a></li>
+							<li><a href="">Купить ноутбук в кредит</a></li>
+						</ul>
+						<a href="" class="contact-us">Обратная связь</a>
+						<div><img src="img/yandex.png" alt=""></div>
+					</div>
+					<div class="col-lg-4">
+						<h4>Каталог товаров :</h4>
+						<ul class="footer-menu">
+							<li><a href="">Ноутбуки</a></li>
+							<li><a href="">Акустика</a></li>
+							<li><a href="">Сетевое Оборудывание</a></li>
+							<li><a href="">Источники бесперебойного питания</a></li>
+							<li><a href="">Что то еще</a></li>
+							<li><a href="">Что то еще</a></li>
+							<li><a href="">Что то еще</a></li>
+						</ul>
+						<a href="" class="all-catalog">Посмотреть весь каталог</a>
+						<div class="price-list">
+							<a href="">
+								Скачать прайс-лист
+							</a>
+							(Москва) (.xls, 385.37Кб) <br>
+							обновлен 20.04.2016 17:41:45.
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<h5>Подписка на рассылку :</h5>
+						<div class="subscribe">
+							<input type="text">
+							<input type="submit" value="Подписка">
+						</div>
+						<h5>Присоединяйтесь к нам :</h5>
+
+						<ul class="social-menu menu">
+							<li><a href=""><img src="img/social1.jpg" alt=""></a></li>
+							<li><a href=""><img src="img/social2.jpg" alt=""></a></li>
+							<li><a href=""><img src="img/social3.jpg" alt=""></a></li>
+							<li><a href=""><img src="img/social4.jpg" alt=""></a></li>
+							<li><a href=""><img src="img/social5.jpg" alt=""></a></li>
+						</ul>
+						<h5>Контактная информация</h5>
+						<div class="contact-address">105318, Россия, город Москва, Газетный переулок д.3/5</div>
+						<div class="contact-phone">
+							<a href="">Заказать звонок</a>
+							<div class="order-call">
+								<form action="">
+									<div class="subscribe">
+										<input type="text" placeholder="Имя:"> <br>
+										<input type="text" placeholder="Телефон:"> <br>
+										<input type="submit" value="Заказать">
+									</div>
+								</form>
+							</div>
+							: +7 (495) 181-27-37
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="payments">
+		<div class="inner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="payments__title">Мы принимаем</div>
+						<img src="img/payments.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="footer__top">
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="container-fluid">
+				<div class="row">
+					<p>
+						В разделе "Компьютеры и планшеты" интернет-магазина представлен широкий ассортимент товаров. В нашем каталоге вы найдете все последние новинки компьютеров и планшетов с подробным описанием технических характеристик, фото и ценами. Заказать компьютер и планшет с доставкой по Москве можно прямо сейчас, оформив покупку на сайте или по телефону  +7 (495) 181 -27-37. Продажа компьютеров и планшетов так же осуществляется в наших розничных магазинах, адреса которых вы можете узнать у нас на сайте.
+					</p>
+					<ul class="menu">
+						<li><a href="">Карта сайта</a></li> |
+						<li><a href="">Правила пользования магазином</a></li>
+					</ul>
+					<a href="">
+						<img src="img/footer-logo.png" alt="">
+					</a>
+					<div class="copyright">
+						© 2010-2012 xbook.ru, shop@xbook.ru
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<div class="hidden"></div>
+
 
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>

@@ -5590,25 +5590,38 @@ $(function() {
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-	$('.owl-carousel').owlCarousel({
+	$('.owl-main').owlCarousel({
 		loop:true,
 		margin:0,
 		responsiveClass:true,
 		items: 1,
-		pag: true
+		pag: true,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		touchDrag: false,
+		mouseDrag: false
+	});
+	$('.owl-reviews').owlCarousel({
+		loop:true,
+		margin:0,
+		responsiveClass:true,
+		items: 1,
+		nav: true,
+		autoplay: true,
+		autoplayTimeout: 5000
 	});
 	particlesJS('main_slider', {
 		particles: {
-			color: '#00a100',
+			color: '#4dac21',
 			shape: 'circle', // "circle", "edge" or "triangle"
 			opacity: 1,
-			size: 6,
+			size: 3,
 			size_random: true,
 			nb: 250,
 			line_linked: {
 				enable_auto: true,
-				distance: 200,
-				color: '#00a100',
+				distance: 160,
+				color: '#4dac21',
 				opacity: 1,
 				width: 1,
 				condensed_mode: {
@@ -5625,7 +5638,7 @@ $(function() {
 		interactivity: {
 			enable: true,
 			mouse: {
-				distance: 250
+				distance: 200
 			},
 			detect_on: 'canvas', // "canvas" or "window"
 			mode: 'grab',
@@ -5652,6 +5665,7 @@ $(function() {
 		/* Retina Display Support */
 		retina_detect: true
 	});
+
 	$(".item-cats").mCustomScrollbar({
 		axis: "x"
 	});
@@ -5660,6 +5674,15 @@ $(function() {
 		item_cat_width += $(this).width() + 80 + 82
 	});
 	$(".item-cats .scroller").width(item_cat_width);
+
+	$('.catalog__items__title').on("click",function(){
+		$(this).toggleClass('active')
+	});
+
+	$(".contact-phone a,.mail").on("click",function(e){
+		e.preventDefault();
+		$(this).toggleClass("active");
+	})
 });
 
 /* -----------------------------------------------

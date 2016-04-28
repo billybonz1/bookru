@@ -1,5 +1,12 @@
 @import "bourbon"
 @import "vars.sass"
+=buttons_hover($color)
+	background-color: $color
+	box-shadow: 0 2px 0 0 darken($color,15)
+	transition: .2s all
+	&:hover
+		background-color: darken($color,15)
+		box-shadow: 0 2px 0 0 darken($color,25)
 .chromeperfectpixel-portal
 	width: 100% !important
 	height: 100% !important
@@ -34,6 +41,8 @@ body
 	min-height: 35px
 	border-top: 3px solid #fff
 	background: #e9e9e9
+	position: relative
+	z-index: 2
 
 .inner
 	max-width: 1215px
@@ -52,12 +61,32 @@ body
 		vertical-align: top
 		padding-top: 0
 		min-height: 32px
+		position: relative
+		ul
+			transition: .2s all
+			transform: scale(0)
+			padding-left: 0
+			visibility: hidden
+			opacity: 0
+			position: absolute
+			top: 33px
+			right: 0
+			background: linear-gradient(#fff, #f3f5f4)
+			box-shadow: 0px 1px 3px rgba(0,0,0,0.66),inset 0px -2px 0px rgba(0,0,0,0.17)
+			li
+				width: 100%
+			a
+				display: block
+		&:hover ul
+			transform: scale(1)
+			visibility: visible
+			opacity: 1
 	a
 		min-height: 32px
 		display: block
 		padding: 0 40px
 		color: #5b5b5b
-		font-size: 13px
+		font-size: 16px
 		font-weight: 600
 		line-height: 31px
 		text-transform: uppercase
@@ -107,7 +136,7 @@ body
 	letter-spacing: -0.7px
 	font-family: 'RobotoBlack'
 	text-decoration: none
-	&:hover
+	&:hover,&:focus
 		text-decoration: none
 		color: inherit
 	span
@@ -117,24 +146,23 @@ body
 	display: block
 	width: 100%
 	height: 53px
-	box-shadow: 0px 2px 0px 1px #037303
 	font-family: Tahoma
 	color: #ffffff
-	font-size: 14px
-	line-height: 51px
+	font-size: 16px
+	line-height: 56px
 	font-weight: 400
 	text-align: center
 	letter-spacing: -1px
 	position: relative
 	padding-left: 22px
-	background: #00a100 url(../img/arr_bottom.png) no-repeat 154px center
+	background: url(../img/arr_bottom.png) no-repeat 159px center
 	margin-bottom: 17px
 	&:hover, &:focus
 		text-decoration: none
 		color: #fff
 	> span
 		position: absolute
-		top: 15px
+		top: 19px
 		display: block
 		left: 13px
 	span span
@@ -146,6 +174,47 @@ body
 	&:hover
 		color: #ffffff
 		text-decoration: none
+	+buttons_hover(#00a100)
+
+.catalog-menu
+	li
+		position: relative
+		z-index: 2
+		width: 100%
+		ul
+			width: 100%
+			list-style: none
+			transition: .2s all
+			transform: scale(0)
+			padding-left: 0
+			visibility: hidden
+			opacity: 0
+			position: absolute
+			top: 57px
+			right: 0
+			background: linear-gradient(#fff, #f3f5f4)
+			box-shadow: 0px 1px 3px rgba(0,0,0,0.66),inset 0px -2px 0px rgba(0,0,0,0.17)
+			li
+				width: 100%
+			a
+				min-height: 32px
+				display: block
+				padding: 0 40px
+				color: #5b5b5b
+				font-size: 16px
+				font-weight: 600
+				line-height: 31px
+				text-transform: uppercase
+				letter-spacing: -1.3px
+				transition: .2s all
+				&:hover
+					background: #00a100
+					color: #fff
+					text-decoration: none
+		&:hover ul
+			transform: scale(1)
+			visibility: visible
+			opacity: 1
 
 .logo
 	display: block
@@ -277,13 +346,13 @@ body
 	position: relative
 
 .eg
-	font-family: 'Open Sans Condensed'
+	font-family: 'Open Sans'
 	color: #5e5e5e
-	font-size: 13px
+	font-size: 14px
 	/* Приближение из-за подстановки шрифтов
-	font-weight: 300
+	font-weight: 400
 	text-align: left
-	letter-spacing: -1px
+	letter-spacing: 0px
 	margin-top: 6px
 	margin-left: 29px
 	a
@@ -347,7 +416,7 @@ body
 		line-height: 20px
 	&:after
 		height: 16px
-		border-right: 1px dashed #000
+		border-right: 1px dashed #999
 		content: ""
 		position: absolute
 		right: -4px
@@ -391,6 +460,7 @@ body
 		height: 56px
 		margin-top: 1px
 		vertical-align: top
+		z-index: 2
 	&:hover
 		& > a
 			background: #00a100
@@ -403,11 +473,12 @@ body
 section.middle_menu
 	background: linear-gradient(#fff, #f3f5f4)
 	box-shadow: 0px 1px 3px rgba(0,0,0,0.66),inset 0px -2px 0px rgba(0,0,0,0.17)
-	margin-top: 4px
 .main_slider
 	position: relative
 	overflow: hidden
 	background: #000
+	border-bottom: 1px solid #4dac21
+	box-shadow: 1px 5px 10px #037303
 	.back
 		position: absolute
 		width: 100%
@@ -615,7 +686,7 @@ canvas
 .item__title
 	font-family: RobotoBlack
 	font-size: 60px
-	color: #fff
+	color: #F5F7F6
 	margin-top: 40px
 	margin-left: 28px
 	text-transform: uppercase
@@ -625,33 +696,36 @@ canvas
 	color: #fefefe
 	margin-left: 56px
 .item__img
+	width: 500px
+	height: 500px
+	background: url(../img/alien.png) no-repeat
 	position: relative
 	float: right
 	max-width: 500px
 	padding: 66px 0
+	background-size: 100%
 	img
 		width: 100%
 
-.owl-nav
-	display: none
-.owl-dots
-	position: absolute
-	bottom: 16px
-	left: 28px
-.owl-dot
-	width: 10px
-	height: 10px
-	display: inline-block
-	background: #037f03
-	border-radius: 100%
-	margin-right: 5px
-	background: gray
-	&.active
-		background: #fff
+.owl-main
+	.owl-nav
+		display: none
+	.owl-dots
+		position: absolute
+		bottom: 16px
+		left: 28px
+	.owl-dot
+		width: 10px
+		height: 10px
+		display: inline-block
+		background: #037f03
+		border-radius: 100%
+		margin-right: 5px
+		background: gray
+		&.active
+			background: #fff
 .item__more
 	border-radius: 5px
-	background-color:  #4dac21
-	box-shadow: 0px 2px 0px 0px darken(#4dac21, 20)
 	width: 187px
 	height: 34px
 	font-weight: 600
@@ -659,14 +733,14 @@ canvas
 	display: block
 	margin-left: 56px
 	text-align: center
-	margin-top: 20px
+	position: absolute
+	bottom: 90px
 	line-height: 34px
 	transition: .2s all
 	&:hover
 		text-decoration: none
-		background-color:  darken(#4dac21,20)
-		box-shadow: 0px 2px 0px 0px darken(#4dac21, 40)
 		color: #fff
+	+buttons_hover(#4dac21)
 
 .item-cat
 	margin: 0 79px
@@ -674,7 +748,7 @@ canvas
 	text-align: center
 	font-size: 16px
 	color: #1b1b1b
-	padding-top: 20px
+	padding-top: 30px
 	font-weight: bold
 	img
 		display: block
@@ -682,7 +756,7 @@ canvas
 		margin-bottom: 10px
 
 .item-cats
-	height: 185px
+	height: 245px
 	div.scroller
 		width: 2000px
 /*
@@ -1995,5 +2069,491 @@ canvas
 /* ----------------------------------------
 
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail
-	height: 25px
-	background: url(../img/scroll.png)
+	height: 15px
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.216) 0%, rgba(0, 0, 0, 0) 100%)
+	box-shadow: 0px 4px 11.04px 0.96px rgba(0, 0, 0, 0.5)
+	border-style: solid
+	border-width: 5px
+	border-color:  #000000
+.mCSB_scrollTools.mCSB_scrollTools_horizontal
+	top: 205px
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar
+	background: #009300 url(../img/scroller.jpg) center no-repeat
+	height: 17px
+	box-shadow: 0 3px 0 0 darken(#009300,20)
+.promotion
+	background: #fff url(../img/back.jpg) center top no-repeat
+	box-shadow: inset 0px 0px 3px rgba(0,0,58,0.21)
+	min-height: 284px
+.main__cats
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.66),inset 0px -2px 0px rgba(0,0,0,0.17), 0px 1px 2px rgba(0,0,0,0.44),inset 0px -5px 0px rgba(0,0,0,0.08)
+	padding: 20px 0
+
+.promotion__title
+	font-size: 40px
+	color: #000000
+	font-family: Roboto
+	font-weight: bold
+	border-bottom: 1px solid #000
+	line-height: 37px
+	margin-top: 70px
+
+.promotion__price
+	font-family: Tahoma
+	color:  #4dac21
+	font-size: 35px
+	font-weight: 400
+	text-align: left
+	margin: 15px 0
+	text-shadow: 1px 1px 1px #fff
+	span
+		border-bottom: 2px solid
+
+.promotion__img
+	padding: 14px 0
+
+.promotion__buy
+	border-radius: 5px
+	width: 147px
+	height: 30px
+	display: block
+	font-family: Open Sans Condensed
+	color:  #f2f2f2
+	font-size: 16px
+	font-weight: 700
+	text-align: left
+	background: url(../img/buy.png) no-repeat 10px 6px
+	padding-left: 46px
+	transition: .2s all
+	line-height: 28px
+	&:hover
+		color: #fff
+		text-decoration: none
+	+buttons_hover(#4dac21)
+
+.catalog__item__img
+	img
+		width: 100%
+	margin-bottom: 20px
+.catalog__item__imgs
+	a
+		display: inline-block
+		width: 22%
+		padding: 0 2% 0 1.5%
+		border-right: 1px solid #e8e8e8
+		&:last-child
+			border-right: 0
+	img
+		width: 100%
+
+.catalog__item__title
+	color: #4dac21
+	font-family: 'Open Sans'
+	font-size: 18px
+	text-align: center
+	padding: 25px 0
+.catalog__item__rating
+	text-align: center
+	span
+		width: 19px
+		height: 18px
+		background: url(../img/rating.png) -20px 0px
+		display: inline-block
+		margin: 0 1.5px
+		&.active
+			background: url(../img/rating.png) 0px 0px
+
+.catalog__item__price
+	font-size: 24px
+	font-family: Tahoma
+	color: #000000
+	text-align: center
+	padding-top: 10px
+
+.catalog__item__text
+	font-family: Tahoma
+	color: #444444
+	font-size: 14px
+	text-align: center
+	margin: 10px 10px
+
+.catalog__item__quantity
+	padding: 10px 0
+	text-align: center
+	& > *
+		display: inline-block
+		text-align: center
+		vertical-align: middle
+	& > *:not(input)
+		border-radius: 5px
+		border-width: 0.4600000000000001px
+		border-color:  #707070
+		border-style: solid
+		width: 20px
+		height: 24px
+		line-height: 19px
+		cursor: pointer
+		+buttons_hover(#f0f0f0)
+	& > input
+		border-width: 1px
+		border-color:  #707070
+		border-style: solid
+		background-color:  #ffffff
+		width: 33px
+		height: 19px
+		font-family: Tahoma
+		font-size: 16px
+		line-height: 5px
+.catalog__item__plus
+	background: #fdfdfd
+	color: #00a100
+
+.catalog__item__buy
+	border-radius: 5px
+	width: 130px
+	height: 32px
+	display: block
+	margin: 10px auto
+	text-align: center
+	color: #fff
+	font-size: 18px
+	line-height: 30px
+	transition: .2s all
+	&:hover
+		color: #fff
+		text-decoration: none
+	+buttons_hover(#4dac21)
+.catalog__item
+	& > div
+		border-bottom: 1px solid #4dac21
+		padding: 0 10px
+		padding-bottom: 25px
+.catalog__items__title
+	font-size: 24px
+	font-family: 'Open Sans Condensed'
+	font-weight: bold
+	color: #000000
+	width: 196px
+	text-align: center
+	margin: 30px auto
+	border-bottom: 1px solid #4dac21
+	position: relative
+	cursor: pointer
+	&:after,&:before
+		content: ""
+		display: block
+		width: 7px
+		height: 4px
+		position: absolute
+		background: url(../img/arr_down.png)
+		top: 20px
+	&:after
+		left: 10px
+	&:before
+		right: 10px
+	&.active
+		&:after,&:before
+			transform: rotate(180deg)
+.catalog__items__title + .inner
+	height: 0
+	overflow: hidden
+	transition: .2s all
+.catalog__items__title.active + .inner
+	height: 809px
+.center
+	text-align: center
+.catalog__pagination
+	padding: 0
+	margin: 40px 0
+	list-style: none
+	li
+		display: inline-block
+		width: 23px
+		height: 23px
+		background: #959595
+		border: 2px solid #e3e3e3
+		border-radius: 200px
+		cursor: pointer
+		&.active
+			background: #4dac21
+.catalog__item__buttons
+	max-width: 150px
+	position: absolute
+	top: 0
+	left: 0
+	& > *
+		margin-bottom: 10px
+		padding: 2px 10px 2px 10px
+		font-size: 14px
+		color: #fff
+		font-weight: 300
+		display: inline-block
+.catalog__item__recommend
+	background-image: url(../img/reccomend.png)
+	background-color: #ed1c24
+	background-repeat: no-repeat
+	background-position: 120px center
+	padding: 2px 40px 2px 10px
+.catalog__item__new
+	background: #00a100
+.catalog__item__discount
+	background: #790000
+.catalog__brands
+	margin: 20px 0
+	li
+		height: 60px
+		padding: 0 20px
+		display: inline-block
+		box-shadow: 0px 0px 0px 1px #c1c1c1
+		background: linear-gradient(#fff, #f2f4f3)
+.reviews__title
+	font-size: 30px
+	text-align: center
+	font-weight: 300
+	margin-bottom: 30px
+	padding-top: 30px
+.reviews__text
+	font-size: 18px
+	font-weight: 400
+	text-align: center
+	margin-bottom: 60px
+.reviews__name,.reviews__date
+	font-size: 14px
+	text-align: center
+	margin-top: 20px
+.reviews__date
+	margin-top: 0
+.reviews__more
+	float: right
+	font-size: 14px
+	color: #4dac21
+.reviews
+	box-shadow: inset 0px 0px 3px rgba(0,0,58,0.21)
+	.catalog-lg-12
+		background: url("../img/cloud.png") no-repeat
+	.item
+		padding-bottom: 20px
+	.owl-prev,.owl-next
+		width: 44px
+		height: 45px
+		position: absolute
+		top: 50%
+		margin-top: -25px
+		font-size: 0
+		transform: scale(1)
+		transition: .2s all
+		&:hover
+			transform: scale(1.1)
+	.owl-prev
+		background: url(../img/arr_left.png)
+		left: 0
+	.owl-next
+		background: url(../img/arr_right.png)
+		right: 0
+
+h3
+	font-size: 30px
+	font-weight: 600
+	color: #1b1b1b
+p
+	font-size: 14px
+	color: #444444
+p.margin
+	margin-left: 30px
+.main__news
+	padding-left: 80px
+	position: relative
+.main__news__date
+	width: 65px
+	padding-top: 40px
+	text-align: center
+	position: absolute
+	font-size: 12px
+	color: #444444
+	font-weight: 300
+	left: 0
+	background: url(../img/date.png) no-repeat center top
+.main__news__title
+	font-family: RobotoBlack
+	font-size: 18px
+	color: #56a31a
+	line-height: 19px
+	display: block
+	margin-bottom: 15px
+.main__news__text
+	font-size: 14px
+	color: #444444
+.main__news__pag
+	padding-top: 20px
+	padding-left: 80px
+	ul
+		display: inline-block
+	li
+		display: inline-block
+		border-radius: 200px
+		width: 12px
+		height: 12px
+		background: #037f03
+		&.active
+			background: #00a100
+.main__news__more
+	font-size: 14px
+	color: #000000
+	text-decoration: underline
+	margin-left: 20px
+h4
+	font-size: 24px
+	font-weight: 600
+	color: #000000
+.footer-menu
+	padding-left: 20px
+	li
+		list-style: circle
+	a
+		font-size: 14px
+		color: #00a100
+		text-decoration: underline
+.contact-us
+	font-size: 14px
+	color: #444444
+	padding-left: 30px
+	background: url(../img/contact-us.png) no-repeat
+	margin-bottom: 20px
+	display: block
+h5
+	font-size: 20px
+	font-family: 'Open Sans'
+	color: #000000
+	font-weight: 300
+	margin: 20px 0 10px 0
+.subscribe
+	input[type=text]
+		height: 32px
+		border-radius: 4px
+		box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.18)
+		border: 0
+		width: 70%
+	input[type=submit]
+		height: 32px
+		width: 29%
+		color: #fff
+		border: 0
+		border-radius: 4px
+		font-size: 13px
+		+buttons_hover(#00a100)
+.social-menu
+	li
+		list-style: none
+		display: inline-block
+.all-catalog
+	background: url(../img/all-catalog.png) no-repeat 0 center
+	padding-left: 25px
+	font-size: 14px
+	font-weight: 300
+	color: #444444
+.price-list
+	margin-top: 20px
+	background: url(../img/price.png) no-repeat 0 center
+	font-size: 14px
+	color: #444444
+	padding-left: 30px
+	line-height: 27px
+	a
+		color: #4dac21
+.contact-address,.contact-phone
+	font-size: 14px
+	font-weight: 300
+	color: #444444
+	background: url(../img/address.png) no-repeat 0 center
+	padding-left: 20px
+	margin-bottom: 10px
+.contact-phone
+	position: relative
+	padding-left: 25px
+	background-image: url(../img/phone.png)
+	a
+		color: #4dac21
+		text-decoration: underline
+.payments
+	padding: 30px 0
+	text-align: center
+	img
+		width: 100%
+.payments__title
+	font-size: 24px
+	font-weight: 300
+	text-align: center
+	margin-bottom: 10px
+	margin-top: 20px
+
+footer
+	position: relative
+	background: #000000 url(../img/footer.png) no-repeat center top
+	min-height: 304px
+	padding-top: 66px
+	padding-bottom: 50px
+	text-align: center
+	ul
+		display: inline-block
+		color: #e8e4e4
+		padding-bottom: 20px !important
+		li
+			display: inline-block
+			a
+				font-size: 12px
+				color: #e8e4e4
+				&:hover
+					color: #e8e4e4
+	p
+		font-size: 12px
+		color: #666666
+		text-align: center
+.copyright
+	color: #e8e4e4
+	font-size: 12px
+	margin-top: 20px
+.footer__top
+	border-bottom: 1px dotted #fff
+	position: absolute
+	width: 100%
+	top: 10px
+	span
+		display: inline-block
+		width: 9px
+		height: 9px
+		background: #fff
+		border-radius: 100%
+		vertical-align: top
+	div
+		background: #0b0b0b
+		width: 46px
+		height: 10px
+		position: absolute
+		left: 50%
+		margin-left: -28px
+		top: -3px
+.order-call
+	transition: .2s all
+	transform: scale(0)
+	opacity: 0
+	visibility: hidden
+	position: absolute
+	width: 300px
+	text-align: center
+	padding: 10px
+	top: 28px
+	background: linear-gradient(#fff, #f3f5f4)
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.66),inset 0px -2px 0px rgba(0,0,0,0.17)
+	input:not([type=submit])
+		text-indent: 10px
+	input
+		margin-bottom: 10px
+.contact-phone a.active + .order-call,
+.mail.active + .order-call
+	transform: scale(1)
+	opacity: 1
+	visibility: visible
+.mail.active + .order-call
+	z-index: 3
+	top: 122px
+	left: 231px
